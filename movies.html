@@ -23,11 +23,22 @@
             margin-top:-4rem;
             border-radius: 0px !important;
         }
+
+        .container{
+            width:100%;
+        }
+        input{
+            width:85%;}
     </style>
 </head>
 <body>
     
 <div class="row"><span><b>Movies</b></span>
+    <br><br>
+    <div class="container">
+  <input id="searchBar" type="text" placeholder="Search"/>
+</div>
+<br><br>
     <div class="col-12">
 
 <br>
@@ -214,10 +225,24 @@
         
 </div>
 
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function(){
+  $("p").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".card").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+
+     
+    });
+  });
+});
 
 </body>
 
 </html>
+
 
 
 
