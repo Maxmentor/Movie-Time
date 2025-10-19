@@ -228,7 +228,7 @@
 
 <script>
   $(document).ready(function(){
-  $(".mv").on("keyup", function() {
+  $("#mv").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     $(".card").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
@@ -241,6 +241,7 @@
 </body>
 
 </html>
+
 
 
 
